@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redragon M711 Cobra | BLACKHYLE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">BLACKHYLE</div>
+            <nav class="nav">
+                <a href="index.html">HOME</a>
+                <a href="#">RIG BUILDER</a>
+                <a href="#">GRAPHICS CARDS</a>
+                <a href="#">PERIPHERALS</a>
+                <a href="#">ABOUT</a>
+                <a href="cart.html" class="nav-cart-btn">CART (1)</a>
+            </nav>
+            <div class="hamburger">Menu</div>
+        </div>
+    </header>
+
+    <!-- Product Details -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> / <a href="#">MOUSE</a> / REDRAGON M711 COBRA
+            </div>
+
+            <div class="product-grid">
+                <!-- Left: Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-thumbnails">
+                        <img src="https://redragonshop.com/cdn/shop/products/M711_1_2000x.png" alt="Thumb 1"
+                            class="active">
+                        <img src="https://redragonshop.com/cdn/shop/products/M711_2_2000x.png" alt="Thumb 2">
+                        <img src="https://redragonshop.com/cdn/shop/products/M711_3_2000x.png" alt="Thumb 3">
+                        <img src="https://redragonshop.com/cdn/shop/products/M711_4_2000x.png" alt="Thumb 4">
+                    </div>
+                    <div class="main-image-container">
+                        <img src="https://redragonshop.com/cdn/shop/products/M711_1_2000x.png" alt="Redragon M711 Cobra"
+                            id="mainImage">
+                    </div>
+                </div>
+
+                <!-- Right: Info -->
+                <div class="product-info">
+                    <span class="sku">REDRAGON</span>
+                    <h1>REDRAGON M711 COBRA RGB GAMING MOUSE</h1>
+                    <p class="price-tag">Rs. 4,300</p>
+
+                    <div class="product-description">
+                        <p>The Redragon M711 COBRA is designed for eSports pros who demand the best. With a 10,000 DPI
+                            optical sensor, 16.8 million RGB color options, and 7 programmable buttons, it’s built for
+                            precision and speed.</p>
+                        <br>
+                        <ul style="padding-left: 20px;">
+                            <li>10,000 DPI Optical Sensor</li>
+                            <li>7 Programmable Buttons</li>
+                            <li>16.8 Million RGB Colors</li>
+                            <li>Comfortable Ergonomic Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="qty-selector">
+                            <button class="qty-btn" onclick="decrement()">-</button>
+                            <input type="text" value="1" class="qty-input" id="qty">
+                            <button class="qty-btn" onclick="increment()">+</button>
+                        </div>
+                        <button class="btn-add-cart">ADD TO CART</button>
+                        <button class="btn-buy-now">BUY IT NOW</button>
+                    </div>
+
+                    <div class="trust-badges">
+                        <span>SHIPPING & DELIVERY: 2-3 WORKING DAYS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>RIG BUILDER</h4>
+                <ul>
+                    <li>Custom PCs</li>
+                    <li>Prebuilt Rigs</li>
+                </ul>
+            </div>
+            <div>
+                <h4>GRAPHICS CARDS</h4>
+                <ul>
+                    <li>NVIDIA</li>
+                    <li>AMD</li>
+                    <li>Limited Editions</li>
+                </ul>
+            </div>
+            <div>
+                <h4>PERIPHERALS</h4>
+                <ul>
+                    <li>Keyboards</li>
+                    <li>Mice</li>
+                    <li>Headsets</li>
+                    <li>Monitors</li>
+                </ul>
+            </div>
+            <div>
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Contact</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gaming Gear Elite. All rights reserved.</p>
+            <div class="social">
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Twitch</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Quantity Logic
+        const qtyInput = document.getElementById('qty');
+        function increment() {
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+        }
+        function decrement() {
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+
+        // Thumbnail Logic
+        const thumbs = document.querySelectorAll('.gallery-thumbnails img');
+        const mainImg = document.getElementById('mainImage');
+
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                // Remove active class from all
+                thumbs.forEach(t => t.classList.remove('active'));
+                // Add active to clicked
+                thumb.classList.add('active');
+                // Change main image
+                mainImg.src = thumb.src;
+            });
+        });
+    </script>
+</body>
+
+</html>

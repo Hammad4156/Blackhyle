@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart | BLACKHYLE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">BLACKHYLE</div>
+            <nav class="nav">
+                <a href="index.html">HOME</a>
+                <a href="#">RIG BUILDER</a>
+                <a href="#">GRAPHICS CARDS</a>
+                <a href="#">PERIPHERALS</a>
+                <a href="cart.html" class="nav-cart-btn">CART (1)</a>
+            </nav>
+            <div class="hamburger">Menu</div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 40px;">YOUR CART</h2>
+
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th width="50%">PRODUCT</th>
+                                <th>PRICE</th>
+                                <th>QUANTITY</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cart-item-info">
+                                        <img src="https://redragonzone.pk/cdn/shop/products/Redragon_Ares_H120_Gaming_headset_2048x2048.jpg"
+                                            alt="Mouse">
+                                        <div>
+                                            <h4>REDRAGON M711 COBRA</h4>
+                                            <p>SKU: RD-M711-RGB</p>
+                                            <a href="#" class="remove-btn">REMOVE</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>Rs. 4,300</td>
+                                <td>
+                                    <div class="cart-qty">
+                                        <input type="number" value="1" min="1">
+                                    </div>
+                                </td>
+                                <td style="color: var(--accent); font-weight: bold;">Rs. 4,300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Summary -->
+                <div class="cart-summary">
+                    <h3>ORDER SUMMARY</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>Rs. 4,300</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Calculated at checkout</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>TOTAL</span>
+                        <span>Rs. 4,300</span>
+                    </div>
+                    <button class="btn-checkout">PROCEED TO CHECKOUT</button>
+                    <p style="margin-top: 15px; font-size: 12px; color: #666; text-align: center;">
+                        Secure Checkout - SSL Encrypted
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>RIG BUILDER</h4>
+                <ul>
+                    <li>Custom PCs</li>
+                    <li>Prebuilt Rigs</li>
+                </ul>
+            </div>
+            <div>
+                <h4>GRAPHICS CARDS</h4>
+                <ul>
+                    <li>NVIDIA</li>
+                    <li>AMD</li>
+                    <li>Limited Editions</li>
+                </ul>
+            </div>
+            <div>
+                <h4>PERIPHERALS</h4>
+                <ul>
+                    <li>Keyboards</li>
+                    <li>Mice</li>
+                    <li>Headsets</li>
+                    <li>Monitors</li>
+                </ul>
+            </div>
+            <div>
+                <h4>ABOUT</h4>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Contact</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Gaming Gear Elite. All rights reserved.</p>
+            <div class="social">
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">Twitch</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js">
+        // Simple header scroll
+        window.addEventListener('scroll', () => {
+            document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+
+</html>
